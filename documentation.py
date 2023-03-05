@@ -1,9 +1,8 @@
-from os import listdir, walk
+from os import walk, getcwd
 from time import time
-from psutil import users
 
 s = time()
-path = f"/Users/{users()[0][0]}/Desktop/Code/CodeEdit/CodeEdit/"
+path = getcwd()
 
 files_dict = {}
 for (dir_path, dir_names, filenames) in walk(path):
